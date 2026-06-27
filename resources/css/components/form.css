@@ -1,0 +1,48 @@
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-bottom: 1rem;
+}
+
+
+.form-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #4c1d95;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    border: 1px solid var(--color-border);
+    border-radius: 0.9rem;
+    background: var(--color-surface);
+    color: var(--color-text);
+    padding: 0.8rem 0.95rem;
+    font: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+
+.form-help {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+}
+
+.form-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    box-shadow: 0 16px 36px rgba(109, 40, 217, 0.08);
+}
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none !important;
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 4px var(--color-primary-soft) !important;
+}

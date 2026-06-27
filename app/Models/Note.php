@@ -22,7 +22,7 @@ class Note extends Model
         'status'=>NoteStatus::class,
     ];
     protected $attributes=[
-        'status'=>NoteStatus::Pending,
+        'status'=>NoteStatus::Pending->value,
     ];
 
     public function user():BelongsTo{

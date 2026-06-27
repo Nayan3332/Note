@@ -1,7 +1,6 @@
 <?php
 use App\Models\Note;
 use App\Models\User;
-// use Illuminate\Support\Collection;
 
 test('It is belong to a user', function () {
     $note = Note::factory()->create();

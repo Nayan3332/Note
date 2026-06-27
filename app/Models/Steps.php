@@ -11,7 +11,7 @@ class Steps extends Model
 {
     /** @use HasFactory<\Database\Factories\StepsFactory> */
     use HasFactory;
-    protected $attribute =[
+    protected $attributes =[
         'completed'=>false,
 ];
 
