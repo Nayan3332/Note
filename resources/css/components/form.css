@@ -39,10 +39,83 @@
     padding: 1.5rem;
     box-shadow: 0 16px 36px rgba(109, 40, 217, 0.08);
 }
+
 .form-input:focus,
 .form-textarea:focus,
 .form-select:focus {
     outline: none !important;
     border-color: var(--color-primary) !important;
     box-shadow: 0 0 0 4px var(--color-primary-soft) !important;
+}
+
+.register-action-button {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem 1.3rem;
+    border-radius: 1rem;
+    background: linear-gradient(90deg, #8b5cf6 0%, #7c3aed 45%, #6d28d9 100%);
+    color: #ffffff;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.2;
+    box-shadow: 0 18px 45px rgba(124, 58, 237, 0.26), 0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+    overflow: hidden;
+}
+
+.register-action-button:hover {
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 22px 54px rgba(124, 58, 237, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+.register-action-button:active {
+    transform: translateY(0);
+    box-shadow: 0 14px 32px rgba(124, 58, 237, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+.register-action-button svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    color: inherit;
+}
+
+.auth-action-button {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem 1.3rem;
+    border-radius: 1rem;
+    background: linear-gradient(90deg, #8b5cf6 0%, #7c3aed 45%, #6d28d9 100%);
+    color: #ffffff;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.2;
+    box-shadow: 0 18px 45px rgba(124, 58, 237, 0.26), 0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+    overflow: hidden;
+}
+
+.auth-action-button:hover {
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 22px 54px rgba(124, 58, 237, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+.auth-action-button:active {
+    transform: translateY(0);
+    box-shadow: 0 14px 32px rgba(124, 58, 237, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+.auth-action-button svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    color: inherit;
 }
