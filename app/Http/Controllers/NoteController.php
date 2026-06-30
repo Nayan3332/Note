@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreNoteRequest;
 use App\Http\Requests\UpdateNoteRequest;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Note;
 
 class NoteController extends Controller
@@ -13,9 +14,12 @@ class NoteController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): void
+    public function index()
     {
-        //
+        $notes=Auth::user()->notes()->get();
+        return view('note.index',[
+            'notes'=>$notes
+        ]);
     }
 
     /**
@@ -37,9 +41,11 @@ class NoteController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Note $note): void
+    public function show(Note $note)
     {
-        //
+        return view('note.show',[
+            'note'=>$note
+        ]);
     }
 
     /**
