@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Collection;
 
 class Note extends Model
 {
@@ -25,6 +26,21 @@ class Note extends Model
     protected $attributes = [
         'status' => NoteStatus::Pending->value,
     ];
+
+    public static function statuscounts(User $user): Collection
+    {
+        // count the number of notes by status
+        $statusCounts = $user->notes()
+            ->selectRaw('status, count(*) as count')
+            ->groupBy('status')
+            ->pluck('count', 'status');
+
+        return collect(NoteStatus::cases())
+            ->mapWithKeys(fn ($status) => [
+                $status->value => $statusCounts->get($status->value, 0),
+            ])
+            ->put('all', $user->notes()->count());
+    }
 
     public function user(): BelongsTo
     {

@@ -19,7 +19,12 @@ export default defineConfig({
     server: {
         
         watch: {
-            ignored: ['**/storage/framework/views/**'],
+            ignored: [
+                '**/node_modules/**',
+                '**/vendor/**',
+                '**/storage/**',
+                '**/.git/**'
+            ],
         },
     },
 });

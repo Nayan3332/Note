@@ -8,9 +8,6 @@ use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
 {
-    /**
-     * @return void
-     */
     protected function setUp(): void // Changed from public to protected
     {
         parent::setUp();
